@@ -1,4 +1,4 @@
-import { Card, Divider, Drawer, Empty, message, Button } from 'antd'
+import { Card, Divider, Drawer, Empty, message, Button, PageHeader } from 'antd'
 import 'antd/dist/antd.css'
 import { useState } from 'react'
 import { useFavContext } from '../../Context/favourites'
@@ -88,13 +88,9 @@ const Favourites = () => {
                 width={836}
                 onClose={() => setVisible(false)}
                 visible={visible}
+                destroyOnClose={true}
                 extra={
-                    <>
-                        <Button onClick={() => setVisible(false)}>Cancel</Button>
-                        <Button type="primary" onClick={() => setVisible(false)}>
-                            OK
-                        </Button>
-                    </>
+                    <button>teste</button>
                 }
             >
                 {loadingDrawer ? <LoadingOutlined /> : contentDrawer}

@@ -1,6 +1,6 @@
 import 'antd/dist/antd.css'
 import { useEffect, useState } from 'react'
-import { Input, Card, Drawer, message } from 'antd'
+import { Input, Card, Drawer, message, Divider, Empty } from 'antd'
 import { StarFilled, StarOutlined, LoadingOutlined } from '@ant-design/icons'
 import '../../styles.css'
 import { useDebounce } from './../../Hooks/useDebounce'
@@ -88,11 +88,12 @@ const Homepage = () => {
             <div style={{ display: 'flex', justifyContent: 'center' }}>
                 <Search size="large" id="search" onChange={(ev) => setValue(ev.target.value)} placeholder="Search" allowClear onSearch={onSearch} enterButton="Search" style={{ width: 1000 }} />
             </div>
+            <Divider />
             {
                 loading ? <LoadingOutlined /> :
                     movies.Search === undefined ?
                         <div style={{ display: 'flex', justifyContent: 'center', marginTop: 30 }}>
-                            <h1>SEARCH ON MOVIE</h1>
+                            <Empty description={<p>SEARCH ON MOVIE</p>} />
                         </div> :
                         <div className="container">
                             {movies.Search.map((data) => {
