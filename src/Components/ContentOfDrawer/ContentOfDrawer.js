@@ -17,7 +17,7 @@ export const ContentOfDrawer = ({ buttonFavourites, Runtime, Year, Plot, Poster,
                     <Tag title="LIKE" colorTitle="white" content={Rating} backgroundTitle="#ff4040" />
                     {buttonFavourites}
                 </div>
-                <h3 style={{ color: '#000b16ee' }}>Plot<br /><span style={{ opacity: 0.9 }}>{Plot}</span></h3>
+                <h3 style={{ color: '#000b16ee' }}>Plot<br /><span style={{ opacity: 0.7 }}>{Plot}</span></h3>
             </div>
             <div className="container-drawer">
                 <img alt={Title} src={Poster} ></img>
