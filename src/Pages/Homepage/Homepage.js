@@ -90,7 +90,11 @@ const Homepage = () => {
             </div>
             <Divider />
             {
-                loading ? <LoadingOutlined /> :
+                loading ?
+                    <div style={{ display: 'flex', justifyContent: 'center', marginTop: 30 }}>
+                        <LoadingOutlined />
+                    </div>
+                    :
                     movies.Search === undefined ?
                         <div style={{ display: 'flex', justifyContent: 'center', marginTop: 30 }}>
                             <Empty style={{ opacity: 0.5 }} description={<p>SEARCH ON MOVIE</p>} />
@@ -101,7 +105,6 @@ const Homepage = () => {
                                     <Card
                                         id="card"
                                         key={Math.floor(Math.random() * 1000000)}
-                                        style={{ width: 200 }}
                                         cover={<img alt={data.Title} src={data.Poster} onClick={() => showLargeDrawer(data.imdbID)} />}
                                         actions={[
                                             <FavouritesAction
@@ -132,8 +135,8 @@ const Homepage = () => {
                         </div>
             }
             <Drawer
+                id="drawer"
                 placement="right"
-                size="large"
                 width={836}
                 onClose={() => setVisible(false)}
                 visible={visible}

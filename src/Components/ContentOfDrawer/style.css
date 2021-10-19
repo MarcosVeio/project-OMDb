@@ -8,6 +8,7 @@
 .container-drawer img{
     border-radius: 15px;
     box-shadow: 0 0 30px #00040841;
+    width: 300px;
 }
 
 .container-drawer-info{
@@ -30,6 +31,7 @@
 .container-button{
     display: flex;
     padding-bottom: 30px;
+    flex-wrap: wrap;
 }
 
 .buttonTag{
@@ -42,4 +44,10 @@
 
 .buttonTag:hover{
     background: rgba(0, 0, 0, 0.17);
+}
+
+@media (max-width: 768px){
+    #tag{
+        margin: 0 10px 10px 0;
+    }
 }
