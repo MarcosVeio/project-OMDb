@@ -93,7 +93,7 @@ const Homepage = () => {
                 loading ? <LoadingOutlined /> :
                     movies.Search === undefined ?
                         <div style={{ display: 'flex', justifyContent: 'center', marginTop: 30 }}>
-                            <Empty description={<p>SEARCH ON MOVIE</p>} />
+                            <Empty style={{ opacity: 0.5 }} description={<p>SEARCH ON MOVIE</p>} />
                         </div> :
                         <div className="container">
                             {movies.Search.map((data) => {

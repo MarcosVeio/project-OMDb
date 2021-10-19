@@ -1,4 +1,4 @@
-import { Card, Divider, Drawer, Empty, message, Button, PageHeader } from 'antd'
+import { Card, Divider, Drawer, Empty, message, Button, PageHeader, Row } from 'antd'
 import 'antd/dist/antd.css'
 import { useState } from 'react'
 import { useFavContext } from '../../Context/favourites'
@@ -9,7 +9,7 @@ import { getInfoOfMovie } from '../../Services/getInfoOfMovie.js/getInfoOfMovie'
 
 const { Meta } = Card
 const Favourites = () => {
-    const { favourites, removeMovie } = useFavContext()
+    const { favourites, removeMovie, clearFavourites } = useFavContext()
     const [loadingDrawer, setLoadingDrawer] = useState(true)
     const [visible, setVisible] = useState(false)
     const [contentDrawer, setContentDrawer] = useState([])
@@ -55,10 +55,13 @@ const Favourites = () => {
 
     return (
         <>
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
-                <h1>MY FAVOURITES</h1>
+            <div style={{ display: 'flex', justifyContent: 'left' }}>
+                <h1 style={{ opacity: 0.7 }}>MY FAVOURITES</h1>
             </div>
             <Divider />
+            <Row justify="end">
+                <Button onClick={() => clearFavourites()}>CLEAR</Button>
+            </Row>
             {
                 favourites.length === 0 ?
                     <div style={{ display: 'flex', justifyContent: 'center', marginTop: 30 }}>
