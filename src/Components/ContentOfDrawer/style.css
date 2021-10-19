@@ -1,0 +1,44 @@
+.container-drawer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -100px;
+}
+
+.container-drawer img{
+    border-radius: 15px;
+    box-shadow: 0 0 30px #00040841;
+}
+
+.container-drawer-info{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #f5f0f0;
+    border-radius: 10px;
+    padding: 20px;
+    padding-bottom: 200px;
+    color: #000b16ee;
+    box-shadow: 0 0 30px #00040841;
+}
+
+.container-drawer-info .text{
+    display: -webkit-box;
+}
+
+.container-button{
+    display: flex;
+    padding-bottom: 30px;
+}
+
+.buttonTag{
+    border: 1px solid rgba(0, 0, 0, 0.17);
+    border-radius: 5px;
+    background: none;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.buttonTag:hover{
+    background: rgba(0, 0, 0, 0.17);
+}
