@@ -70,7 +70,7 @@ const Favourites = () => {
                                 <Card
                                     id="card"
                                     key={Math.floor(Math.random() * 1000000)}
-                                    style={{ width: 250 }}
+                                    style={{ width: 200 }}
                                     cover={<img alt={data.Title} src={data.Poster} onClick={() => showLargeDrawer(data.imdbID)} />}
                                     actions={[<DeleteOutlined key="favorite" onClick={() => removeMovieOfFavourites(data)} />]}>
                                     <Meta
