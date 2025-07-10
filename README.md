@@ -14,7 +14,17 @@ Sistema react desenvolvido para integração com API OMDb, onde listamos filmes 
 ## 🛠️ Tecnologias Utilizadas
 
 - React
+- Node v16
 - Ant-design
 - Axios
 - React-DOM
 
+## ⚙️ Rodar localmente
+
+1. **Clone o projeto:**
+
+```bash
+git clone https://github.com/MarcosVeio/project-OMDb.git
+cd project-OMDb
+npm i
+npm start
